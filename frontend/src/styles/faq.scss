@@ -1,0 +1,50 @@
+@import "./colors.scss";
+
+.faq {
+    color: #fcc2d7;
+    .grid-col-2 {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        background-color: $pink-700;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 24px;
+        border-radius: 15px;
+        .questions {
+            border-right: 3px solid $pink-400;
+            line-height: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul {
+                padding: 40px;
+            }
+        }
+
+        .answer {
+            padding: 30px;
+            line-height: 2;
+        }
+        .caret {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $pink-400;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 7px;
+            border-radius: 50%;
+        }
+        @media screen and (max-width: 900px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            .questions {
+                border-right: none;
+                border-bottom: 3px solid $pink-400;
+            }
+        }
+    }
+}

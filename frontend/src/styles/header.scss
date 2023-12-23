@@ -1,0 +1,36 @@
+@import "./colors.scss";
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: $pink-700;
+    .brand-link {
+        color: $pink-300;
+        text-decoration: none;
+    }
+    nav {
+        .nav-link,
+        button {
+            color: $pink-300;
+            text-decoration: none;
+            margin-right: 10px;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            &:hover {
+                background-color: $pink-300;
+                color: $pink-700;
+            }
+        }
+        .nav-link.active {
+            background-color: $pink-300;
+            color: $pink-700;
+        }
+    }
+}

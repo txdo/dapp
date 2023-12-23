@@ -1,0 +1,25 @@
+@import "./header.scss";
+@import "./hero.scss";
+@import "./landingPage.scss";
+@import "./faq.scss";
+@import "./features.scss";
+@import "./joinDapp.scss";
+@import "./register.scss";
+@import "./profile.scss";
+@import "./login.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    main {
+        flex-grow: 1;
+    }
+}

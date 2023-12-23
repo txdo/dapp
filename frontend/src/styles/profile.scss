@@ -1,0 +1,26 @@
+@import "./colors.scss";
+
+.profile {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .flex-container {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        background-color: $pink-300;
+        align-items: center;
+        .pfp-container {
+            width: 30%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+}
