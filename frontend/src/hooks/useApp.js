@@ -12,6 +12,8 @@ const useApp = () => {
       });
       if (res.status === 200) {
         setIsLoggedIn(true);
+      } else {
+        setIsLoggedIn(false);
       }
     };
 

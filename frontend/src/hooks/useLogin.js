@@ -27,6 +27,7 @@ const useLogin = () => {
     } else {
       const data = await res.json();
       setError(data.errors[0]);
+      setIsLoggedIn(false);
     }
   };
 

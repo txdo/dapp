@@ -117,6 +117,7 @@ const useRegister = () => {
     if (res.status === 400) {
       const data = await res.json();
       setError(data.errors[0]);
+      setIsLoggedIn(false);
     } else {
       setIsLoggedIn(true);
       navigate("/profile");

@@ -5,9 +5,8 @@ import LandingPage from "./pages/LandingPage";
 import Layout from "./components/Layout";
 import Register from "./pages/Register";
 import Profile from "./pages/Profile";
-import IsNotAuthenticated from "./guards/isNotAuthenticated";
-import IsAuthenticated from "./guards/isAuthenticated";
 import Login from "./pages/Login";
+import AuthGuard from "./guards/AuthGuard";
 
 const App = () => {
   useApp();
@@ -17,9 +16,15 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route element={<Layout />}>
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route
+            element={<AuthGuard condition={true} navigateTo="/register" />}
+          >
+            <Route path="/profile" element={<Profile />} />
+          </Route>
+          <Route element={<AuthGuard condition={false} navigateTo="/" />}>
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+          </Route>
         </Route>
       </Routes>
     </div>
